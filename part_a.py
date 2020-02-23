@@ -28,6 +28,7 @@ def get_number_of_steps(m, count_steps=0):
         return get_number_of_steps(m, count_steps+1)
 
 
+print("\nEnter value for m:\n")
 m = int(input())
 steps = get_number_of_steps(m)
-print("It takes", steps, "steps for number", m, "to reach number 1.")
+print("\nIt takes", steps, "steps for the number", m, "to reach the number 1.\n")

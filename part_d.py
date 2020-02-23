@@ -54,8 +54,9 @@ def plot_graph(m_start, m_end):
 
     fig = px.scatter(x=Xm, y=Ysteps)
     fig.write_html("chart.html")
-    print("Open chart.html to view plotted diagram.")
+    print("\nOpen chart.html to view plotted diagram.\n")
 
 
+print("\nEnter start value followed by end value:\n")
 m_start, m_end = map(int, input().split())
 plot_graph(m_start, m_end)
