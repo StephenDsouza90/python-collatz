@@ -140,8 +140,13 @@ The dependencies are saved in the requirements.txt file. It can be installed via
 
 ## Testing
 
-TODO:
+To run tests locally, use the following command. This will test part a, part b and part c implementation. For this to work, install the `nose` library.
 
+```bash
+
+>> python -m "nose" tests
+
+```
 
 ## Assumptions
 
