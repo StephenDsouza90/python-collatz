@@ -34,18 +34,18 @@ def get_number_of_steps_for_each_m(m_start, m_end):
     For each number m within a range of numbers between m_start and m_end,
     this function returns the number of steps.
 
-    The number and its corresponding steps are stored in a list of dict,
+    The number and its corresponding steps are stored in a dict,
     where key is number m and steps to compute the number is the value.
 
     :param m_start: starting number of the range
     :param m_end: ending number of the range
-    :return all_steps: list of dicts with m as the key and it's corresponding steps as the value
+    :return all_steps: dict with m as the key and it's corresponding steps as the value
     """
 
-    all_steps = []
+    all_steps = {}
     for m in range(m_start, m_end+1):
         s = get_number_of_steps(m)
-        all_steps.append({m : s})
+        all_steps[m] = s
     return all_steps
 
 
