@@ -59,8 +59,12 @@ def get_number_of_steps(m):
     return int(count_steps)
 
 
-if __name__ == '__main__':
+def main():
     print("\nEnter value for m:\n")
     m = int(input())
     steps = get_number_of_steps(m)
     print("\nIt takes", steps, "steps for the number", m, "to reach the number 1.\n")
+
+
+if __name__ == '__main__':
+    main()
