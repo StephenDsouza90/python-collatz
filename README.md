@@ -20,7 +20,7 @@ This impelementation for the Collatz Conjecture is broken down into 4 parts as p
 
 *Implement a program to calculate the number of steps to reach 1 the first time for any given m ∈ N:*
 
-The solution for part(a) is available in `part_a.py`. Here, on my "first" (naive) attempt, I've implemented the sequence formula to compute the number of steps for m to reach 1 the first time using a recursive function. Later in the following parts, I've come to the realization that this solution is not scalable for large numbers because for a very large number m, there is a potential for many recursive calls which can overflow the stack resulting in StackOverflow errors. The later parts uses a more memory efficient solution using loops.
+The solution for part(a) is available in `part_a.py`. Here, on my "first" (naive) attempt, I've implemented the sequence formula to compute the number of steps for m to reach 1 the first time using a recursive function. Later I came to the realization that this solution is not scalable for large numbers because for a very large number m, there is a potential for many recursive calls which can overflow the stack resulting in StackOverflow errors. I changed the logic to use loops which is more memory efficient.
 
 How to run part(a) solution locally:
 
@@ -42,7 +42,7 @@ It takes 6 steps for the number 10 to reach the number 1.
 
 *Adapt the implementation to calculate the number of steps for each m ∈ [1, 10000].*
 
-The solution uses a more memory efficient algorithm to compute the steps for m to reach 1 for all m in the range of `start_value` and `end_value`. The number m and its corresponding steps are stored in a list of dict, where key is number m and steps to compute the number is the value.
+The solution uses an algorithm to compute the steps for m to reach 1 for all m in the range of `start_value` and `end_value`. The number m and its corresponding steps are stored in a dict, where key is number m and steps to compute the number is the value.
 
 How to run part(b) solution locally:
 
@@ -58,10 +58,7 @@ Enter start value followed by end value:
 
 All steps for each number within a range of numbers from 1 to 10
 
-[
-    {1: 0}, {2: 1}, {3: 7}, {4: 2}, {5: 5}, 
-    {6: 8}, {7: 16}, {8: 3}, {9: 19}, {10: 6}
-    ]
+{1: 0, 2: 1, 3: 7, 4: 2, 5: 5, 6: 8, 7: 16, 8: 3, 9: 19, 10: 6}
 
 ```
 
