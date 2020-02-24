@@ -49,7 +49,8 @@ def get_number_of_steps_for_each_m(m_start, m_end):
     return all_steps
 
 
-print("\nEnter start value followed by end value:\n")
-m_start, m_end = map(int, input().split())
-steps_for_each_m = get_number_of_steps_for_each_m(m_start, m_end)
-print("\nAll steps for each number within a range of numbers from", m_start, "to", m_end, "\n\n", steps_for_each_m, "\n")
+if __name__ == '__main__':
+    print("\nEnter start value followed by end value:\n")
+    m_start, m_end = map(int, input().split())
+    steps_for_each_m = get_number_of_steps_for_each_m(m_start, m_end)
+    print("\nAll steps for each number within a range of numbers from", m_start, "to", m_end, "\n\n", steps_for_each_m, "\n")

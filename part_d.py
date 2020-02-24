@@ -71,4 +71,5 @@ def main():
     plot_graph(Xm, Ysteps)
 
 
-main()
+if __name__ == '__main__':
+    main()
