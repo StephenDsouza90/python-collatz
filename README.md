@@ -69,7 +69,32 @@ All steps for each number within a range of numbers from 1 to 10
 
 *Try to improve the implementation to calculate the steps as fast as possbile.*
 
-TODO:
+The solution uses an optimized algorithm to compute the steps for m to reach 1 for all m in the range of `start_value` and `end_value`. The number m and its corresponding steps are stored in a dict, where key is number m and steps to compute the number is the value.
+
+The optimizaion techniques are:
+
+1. Stores the steps for each m in the cache, so that the pre-computed value can be reused next time it comes across the number. This will speed up performance.
+
+2. Any number which is a power of 2 will always be even when divided by 2 and will always reach 1. By taking the log 2 of these numbers, the performance will speed up. The log gives the number of divisions required to reach 1, which is same as number of steps required to reach 1. 
+
+3. Since an odd number when multiplied by 3 and added by 1 results to a even number, it can further be divided by 2 in the same step hence skipping one loop iteration but still maintaining the steps. 
+
+How to run part(c) solution locally:
+
+The program asks for an integer input ...
+
+```bash
+
+>> python part_c.py
+
+Enter start value followed by end value:
+
+1 10
+
+All steps for each number within a range of numbers from 1 to 10
+
+{1: 0, 2: 1, 3: 7, 4: 2, 5: 5, 6: 8, 7: 16, 8: 3, 9: 19, 10: 6}
+```
 
 ### Solution: Part(d)
 
@@ -94,9 +119,11 @@ Open chart.html to view plotted diagram.
 ```
 
 Range 1 to 10
+
 ![Range 1 to 10](https://github.com/StephenDsouza90/python-collatz/blob/draft/images/range_1_to_10.png)
 
 Range 1 to 10000
+
 ![Range 1 to 10000](https://github.com/StephenDsouza90/python-collatz/blob/draft/images/range_1_to_10000.png)
 
 
