@@ -21,8 +21,8 @@ def get_number_of_steps_for_each_m(m_start, m_end):
     it can further be divided by 2 in the same step hence skipping one loop iteration 
     but still maintaining the steps. 
     
-    :param start: starting number of the range
-    :param end: ending number of the range
+    :param m_start: starting number of the range
+    :param m_end: ending number of the range
     :return all_steps: Dict with m as the key and it's corresponding steps as the value
     """
 
