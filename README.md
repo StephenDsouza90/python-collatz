@@ -93,6 +93,19 @@ All steps for each number within a range of numbers from 1 to 10
 {1: 0, 2: 1, 3: 7, 4: 2, 5: 5, 6: 8, 7: 16, 8: 3, 9: 19, 10: 6}
 ```
 
+**With optimization (Part c):** 
+
+    - Took 0.106954 seconds for range [1, 10000]
+    - Took 0.204878 seconds for range [1, 20000]
+    - Took 0.680581 seconds for range [1, 50000]
+    
+**Without optimization (Part b):** 
+
+    - Took 0.585638 seconds for range [1, 10000]
+    - Took 1.328182 seconds for range [1, 20000]
+    - Took 3.405973 seconds for range [1, 50000]
+
+ 
 ### Solution: Part(d)
 
 *Print the number of steps for each m ∈ [1, 10000] as diagram.*
