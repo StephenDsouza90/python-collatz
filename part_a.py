@@ -1,4 +1,4 @@
-def get_number_of_steps(m, count_steps=0):
+def get_number_of_steps_recursive(m, count_steps=0):
     """
     A recursive function that counts the number of steps
     it takes for any given positive number to reach 1.
@@ -25,7 +25,38 @@ def get_number_of_steps(m, count_steps=0):
         # When m is uneven
         else:
             m = m * 3 + 1
-        return get_number_of_steps(m, count_steps+1)
+        return get_number_of_steps_recursive(m, count_steps+1)
+
+
+def get_number_of_steps(m):
+    """
+    A function that counts the number of steps
+    it takes for any given positive number m to reach 1 using the while loop logic.
+
+    The steps follow a sequence defined by 
+    "Collatz conjecture" theory (See README).
+
+    Based on a starting number, 
+    if the number is even then "num / 2",
+    if the number is uneven then "num * 3 + 1".
+
+    :param m: any given positive number from N
+    :return count_steps: the number of steps it takes to reach 1 for any given m
+    """
+
+    # Count number of steps
+    count_steps = 0
+
+    # Terminating condition where m = 1
+    while m != 1:
+        # When m is even
+        if m % 2 == 0:
+            m = m / 2
+        # When m is uneven
+        else:
+            m = m * 3 + 1
+        count_steps += 1
+    return int(count_steps)
 
 
 if __name__ == '__main__':
